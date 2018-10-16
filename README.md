@@ -22,8 +22,11 @@ All readings, homework, labs, and quizzes will be published, in Canvas, the week
 
 ## Working with our class repository
 - FORK It!
+- Clone the FORK!
 - Set up a new remote `git remote add upstream https://github.com/codefellows/seattle-javascript-401d27`
-- Fetch our branches ... `git fetch upstream`
 - Prove it ... `git remote -v`
 - Every day, get the latest ...
+- Fetch our branches ... `git fetch upstream`
 - `git rebase upstream/master`
+
+For reference [Syncing a fork](https://help.github.com/articles/syncing-a-fork/)

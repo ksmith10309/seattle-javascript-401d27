@@ -13,7 +13,6 @@ Create a NodeJS module in the `lib` directory named `greet.js`.  This module sho
 * The `greet` function should return `null` if the input is not a string
 
 #### Greet Module Tests
-* Use the faker module to randomize input
 * Write a test that expects the greet module to return `null` when you supply non-string values
 * Write a test the expects the greet module to return `'hello world'`
   * This should happen when invoked with `'world'` as the first argument
@@ -41,3 +40,25 @@ Create a NodeJS module in the `lib` directory named `arithmetic.js`. This module
 
 ### Documentation
 In your README.md file, describe the exported values of each module defined in your `lib` directory. Every function description should include it's airty (expected number of parameters), the expected data for each parameter (data-type and limitations), and the expected output behavior (for both valid and invalid use). Feel free to include any additional information that you would like.
+
+### Deployment - Stretch Goal : Will cover in class 2
+Pushing to GitHub should trigger Travis-CI build. See https://dev.to/lauragift21/setup-continuous-integration-with-travis-ci-in-your-nodejs-app-26i2
+
+---
+
+## Module Descriptions
+
+### Greet Module
+- This module exports a single function. 
+- This function has arity 1.
+- The expected data type for the parameter is a string.
+- The function is expected to concatenate 'hello ' to the beginning of the parameter.
+- The function returns null if no parameter is supplied or if the parameter supplied is not a string.
+
+### Arithmetic Module
+- This module exports an object that has two methods.
+- The two methods have arity 2. 
+- The expected data type for each parameter is a number.
+- The add method is expected to return the sum of the two parameters.
+- The sub method is expected to return the second parameter subtracted from the first parameter.
+- The methods return null if only one parameter is supplied or if either parameter is not a number.

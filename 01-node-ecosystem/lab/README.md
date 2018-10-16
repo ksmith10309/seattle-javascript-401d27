@@ -43,3 +43,22 @@ In your README.md file, describe the exported values of each module defined in y
 
 ### Deployment - Stretch Goal : Will cover in class 2
 Pushing to GitHub should trigger Travis-CI build. See https://dev.to/lauragift21/setup-continuous-integration-with-travis-ci-in-your-nodejs-app-26i2
+
+---
+
+## Module Descriptions
+
+### Greet Module
+- This module exports a single function. 
+- This function has arity 1.
+- The expected data type for the parameter is a string.
+- The function is expected to concatenate 'hello ' to the beginning of the parameter.
+- The function returns null if no parameter is supplied or if the parameter supplied is not a string.
+
+### Arithmetic Module
+- This module exports an object that has two methods.
+- The two methods have arity 2. 
+- The expected data type for each parameter is a number.
+- The add method is expected to return the sum of the two parameters.
+- The sub method is expected to return the second parameter subtracted from the first parameter.
+- The methods return null if only one parameter is supplied or if either parameter is not a number.

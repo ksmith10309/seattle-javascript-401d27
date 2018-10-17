@@ -3,27 +3,40 @@
 // Require the module under test
 const hello = require('../../lib/hello.js');
 
-// Require the node.js "assert" library
-const assert = require('assert');
+describe('hello module', () => {
 
-// For simplicity, create a local variable to re-use
-let message = '';
+  // For simplicity, create a local variable to re-use
+  let message = '';
 
-// Tests are documentation.  Is there any need to comment what these are doing?  NOT.
-message = hello.sayHello();
-assert.strictEqual(message, null, 'One parameter is required');
+  // Tests are documentation.  Is there any need to comment what these are doing?  NOT.
 
-message = hello.sayHello('john','cathy');
-assert.strictEqual(message, null, 'Only One parameter is permitted');
+  it('should should require one parameter', () => {
+    message = hello.sayHello();
+    expect(message).toEqual(null);
+  });
 
-message = hello.sayHello(1);
-assert.strictEqual(message, null, 'Numeric Values Should Not Be Permitted');
+  it('should permit only one parameter', () => {
+    message = hello.sayHello('john', 'cathy');
+    expect(message).toEqual(null);
+  });
 
-message = hello.sayHello([]);
-assert.strictEqual(message, null, 'Arrays Should Not Be Permitted');
+  it('should not permit numeric values', () => {
+    message = hello.sayHello(1);
+    expect(message).toEqual(null);
+  });
 
-message = hello.sayHello({});
-assert.strictEqual(message, null, 'Objects Should Not Be Permitted');
+  it('should not permit arrays', () => {
+    message = hello.sayHello([]);
+    expect(message).toEqual(null);
+  });
 
-message = hello.sayHello('John');
-assert.strictEqual(message, 'Hello, John', `Output string does not match required (actual: "${message}", expected: "Hello, John")`);
+  it('should not permit objects', () => {
+    message = hello.sayHello({});
+    expect(message).toEqual(null);
+  });
+
+  it('should permit single string parameter', () => {
+    message = hello.sayHello('John');
+    expect(message).toEqual('Hello, John');
+  });
+});

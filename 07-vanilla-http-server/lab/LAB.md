@@ -77,7 +77,7 @@ When a client makes a GET request to /cowsay?text={message} the server should pa
 </html>
 ```
 
-###### GET /api/cowsay?text={message}
+###### POST /api/cowsay
 When a client makes a POST request to /api/cowsay it should send JSON that includes `{"text": "<message>"}`. The server should respond with a JSON body `{"content": "<cowsay cow>"}`.  
 
 A response for a valid Requests should have a status code of 200 and the JSON body   
@@ -94,9 +94,7 @@ A response for a invalid Requests should have a status code of 400 and the JSON 
 }
 ```
 
-###### POST /api/cowsay 
-When a client makes a POST request to /api/cowsay it should send JSON that includes `{"text": "<message>"}`. The server should respond with a JSON body `{"content": "<cowsay cow>"}`.
-
+### Response types
 | Request | Response Status Code | Response Type | Response Body |
 | -- | -- | -- | -- |
 | With out a body | 400 | JSON | `{"error": "invalid request: body required"}` |

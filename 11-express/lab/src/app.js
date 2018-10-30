@@ -1,16 +1,15 @@
 import express from 'express';
-// import albumRouter from './routes/albums.js';
+import calendarRouter from './routes/calendar.js';
 
 const app = express();
 
 app.use(express.json());
-app.use(express.urlencoded({extended:true}));
 
-// app.use(albumRouter);
+app.use(calendarRouter);
 
 module.exports = {
-  app,
-  start: (port) => {
-    app.listen(port, () => console.log('Running on', port));
-  }
-}
+  app: app,
+  start: (PORT) => {
+    app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+  },
+};

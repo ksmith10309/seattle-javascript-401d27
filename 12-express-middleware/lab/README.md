@@ -7,7 +7,7 @@ This application is a server with POST, GET, DELETE, and PUT functionality
 - Clone this repository
 - Ensure node.js is installed
     - If not, run the command `brew install node` in the terminal
-- Navigate to the `/11-express/lab` directory and run the command `npm i` to install dependencies
+- Navigate to the `/12-express-middleware/lab` directory and run the command `npm i` to install dependencies
 - Create a .env file and set PORT to 8080
 - Run the command `node index.js` to start the server
 
